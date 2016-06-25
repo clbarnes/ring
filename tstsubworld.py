@@ -13,11 +13,10 @@ from ring import runring
 pc.runworker()
 
 for ncell in range(5, 10):
-  pc.submit(runring, ncell, 1, 100)
+    pc.submit(runring, ncell, 1, 100)
 
 while (pc.working()):
-  print(pc.pyret())  
+    print(pc.pyret())
 
 pc.done()
 h.quit()
-
